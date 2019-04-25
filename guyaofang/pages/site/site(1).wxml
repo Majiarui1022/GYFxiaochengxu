@@ -1,0 +1,42 @@
+<view class="site-box">
+  <!-- 编辑地址 -->
+  <view class="site-slite">
+    <view class="my-news">
+      <view class="onec">
+        <text class="slite-tit">联系人</text>
+        <input type='text' placeholder-class='pholor' placeholder='名字'></input>
+      </view>
+      <view class="onec">
+        <text class="slite-tit">手机号码</text>
+        <input type='text' placeholder-class='pholor' placeholder='11位手机号'></input>
+      </view>
+      <view class="onec">
+        <text class="slite-tit">选择地区</text>
+        <input type='text' placeholder-class='pholor' placeholder='地区信息'></input>
+      </view>
+      <view class="onec">
+        <text class="slite-tit">详细地址</text>
+        <input type='text' placeholder-class='pholor' placeholder='名字'></input>
+      </view>
+      <view class="onec">
+        <text class="slite-tit">联系人</text>
+        <input type='text' placeholder-class='pholor' placeholder='街道门牌信息'></input>
+      </view>
+      <view class="onec">
+        <text class="slite-tit">邮政编码</text>
+        <input type='text' placeholder-class='pholor' placeholder='邮政编码'></input>
+      </view>
+    </view>
+
+
+
+    <view class='moren'>
+      <view class='cal'>
+      <text>设置为默认地址</text>
+        <view class="body-view">
+          <switch checked bindchange="switch1Change" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+<view class="actovity-box">
+  <view class="image">
+    <image src='../../img/2.jpg'></image>
+  </view>
+
+</view>

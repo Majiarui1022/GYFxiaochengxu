@@ -1,0 +1,246 @@
+<view class='shopp-box'>
+
+  <!-- 商品列表 -->
+  <view class='shopp-list-box'>
+    <view class='shopp-list'>
+      <block>
+        <view class="list">
+          <view class="list-image">
+            <image src='../../img/2.jpg'></image>
+          </view>
+          <view class="menu-con">
+            <view class="content">
+              <text class="shorp-pro">独家定制【觅春】明日之后啊实打实</text>
+              <text class="shorp-name">明前头采 西湖龙井核心产中心中心众筹</text>
+            </view>
+            <view class="list-price">
+              <view>
+                <text class="newpri">￥ 1800</text>
+                <text class="oldpri">￥1888</text>
+              </view>
+              <view class='addshopp-iage'>
+                <image src='../../img/addshopp.png'></image>
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </block>
+       <block>
+        <view class="list">
+          <view class="list-image">
+            <image src='../../img/2.jpg'></image>
+          </view>
+          <view class="menu-con">
+            <view class="content">
+              <text class="shorp-pro">独家定制【觅春】明日之后啊实打实</text>
+              <text class="shorp-name">明前头采 西湖龙井核心产中心中心众筹</text>
+            </view>
+            <view class="list-price">
+              <view>
+                <text class="newpri">￥ 1800</text>
+                <text class="oldpri">￥1888</text>
+              </view>
+              <view class='addshopp-iage'>
+                <image src='../../img/addshopp.png'></image>
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </block>
+       <block>
+        <view class="list">
+          <view class="list-image">
+            <image src='../../img/2.jpg'></image>
+          </view>
+          <view class="menu-con">
+            <view class="content">
+              <text class="shorp-pro">独家定制【觅春】明日之后啊实打实</text>
+              <text class="shorp-name">明前头采 西湖龙井核心产中心中心众筹</text>
+            </view>
+            <view class="list-price">
+              <view>
+                <text class="newpri">￥ 1800</text>
+                <text class="oldpri">￥1888</text>
+              </view>
+              <view class='addshopp-iage'>
+                <image src='../../img/addshopp.png'></image>
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </block>
+       <block>
+        <view class="list">
+          <view class="list-image">
+            <image src='../../img/2.jpg'></image>
+          </view>
+          <view class="menu-con">
+            <view class="content">
+              <text class="shorp-pro">独家定制【觅春】明日之后啊实打实</text>
+              <text class="shorp-name">明前头采 西湖龙井核心产中心中心众筹</text>
+            </view>
+            <view class="list-price">
+              <view>
+                <text class="newpri">￥ 1800</text>
+                <text class="oldpri">￥1888</text>
+              </view>
+              <view class='addshopp-iage'>
+                <image src='../../img/addshopp.png'></image>
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </block>
+
+       <block>
+        <view class="list">
+          <view class="list-image">
+            <image src='../../img/2.jpg'></image>
+          </view>
+          <view class="menu-con">
+            <view class="content">
+              <text class="shorp-pro">独家定制【觅春】明日之后啊实打实</text>
+              <text class="shorp-name">明前头采 西湖龙井核心产中心中心众筹</text>
+            </view>
+            <view class="list-price">
+              <view>
+                <text class="newpri">￥ 1800</text>
+                <text class="oldpri">￥1888</text>
+              </view>
+              <view class='addshopp-iage'>
+                <image src='../../img/addshopp.png'></image>
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </block>
+       <block>
+        <view class="list">
+          <view class="list-image">
+            <image src='../../img/2.jpg'></image>
+          </view>
+          <view class="menu-con">
+            <view class="content">
+              <text class="shorp-pro">独家定制【觅春】明日之后啊实打实</text>
+              <text class="shorp-name">明前头采 西湖龙井核心产中心中心众筹</text>
+            </view>
+            <view class="list-price">
+              <view>
+                <text class="newpri">￥ 1800</text>
+                <text class="oldpri">￥1888</text>
+              </view>
+              <view class='addshopp-iage'>
+                <image src='../../img/addshopp.png'></image>
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </block>
+       <block>
+        <view class="list">
+          <view class="list-image">
+            <image src='../../img/2.jpg'></image>
+          </view>
+          <view class="menu-con">
+            <view class="content">
+              <text class="shorp-pro">独家定制【觅春】明日之后啊实打实</text>
+              <text class="shorp-name">明前头采 西湖龙井核心产中心中心众筹</text>
+            </view>
+            <view class="list-price">
+              <view>
+                <text class="newpri">￥ 1800</text>
+                <text class="oldpri">￥1888</text>
+              </view>
+              <view class='addshopp-iage'>
+                <image src='../../img/addshopp.png'></image>
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </block>
+       <block>
+        <view class="list">
+          <view class="list-image">
+            <image src='../../img/2.jpg'></image>
+          </view>
+          <view class="menu-con">
+            <view class="content">
+              <text class="shorp-pro">独家定制【觅春】明日之后啊实打实</text>
+              <text class="shorp-name">明前头采 西湖龙井核心产中心中心众筹</text>
+            </view>
+            <view class="list-price">
+              <view>
+                <text class="newpri">￥ 1800</text>
+                <text class="oldpri">￥1888</text>
+              </view>
+              <view class='addshopp-iage'>
+                <image src='../../img/addshopp.png'></image>
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </block>
+       <block>
+        <view class="list">
+          <view class="list-image">
+            <image src='../../img/2.jpg'></image>
+          </view>
+          <view class="menu-con">
+            <view class="content">
+              <text class="shorp-pro">独家定制【觅春】明日之后啊实打实</text>
+              <text class="shorp-name">明前头采 西湖龙井核心产中心中心众筹</text>
+            </view>
+            <view class="list-price">
+              <view>
+                <text class="newpri">￥ 1800</text>
+                <text class="oldpri">￥1888</text>
+              </view>
+              <view class='addshopp-iage'>
+                <image src='../../img/addshopp.png'></image>
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </block>
+       <block>
+        <view class="list">
+          <view class="list-image">
+            <image src='../../img/2.jpg'></image>
+          </view>
+          <view class="menu-con">
+            <view class="content">
+              <text class="shorp-pro">独家定制【觅春】明日之后啊实打实</text>
+              <text class="shorp-name">明前头采 西湖龙井核心产中心中心众筹</text>
+            </view>
+            <view class="list-price">
+              <view>
+                <text class="newpri">￥ 1800</text>
+                <text class="oldpri">￥1888</text>
+              </view>
+              <view class='addshopp-iage'>
+                <image src='../../img/addshopp.png'></image>
+              </view>
+            </view>
+          </view>
+
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 发送弹幕 -->
+  <view class='send-box'>
+    <view class='send-data'>
+      <input type='text' class='words' placeholder='发送大屏内容'/>
+      <button class='but'>发送</button>
+    </view>
+  </view>
+</view>

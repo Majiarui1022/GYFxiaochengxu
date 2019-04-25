@@ -1,0 +1,66 @@
+<!-- 轮播图 -->
+<view class="wrap">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+      <block wx:for="{{indeximage}}" wx:key="imgUrls">  
+          <swiper-item>  
+                <image src="{{item}}" class="slide-image" width="100%" height="150" ></image>  
+          </swiper-item>  
+      </block>  
+    </swiper>  
+   <!--重置小圆点的样式  -->
+    <view class="dots">  
+        <block wx:for="{{indeximage}}" wx:key="imgUrls">  
+            <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>  
+        </block>  
+    </view>  
+</view>
+
+<!-- 商品详情 -->
+<view class='big-box'>
+  <view class='pro-box'>
+    <view class='commodity-box'>
+      <view class='pro-price'>
+        <text class='news-price'>￥1800.00</text>
+        <text class='old-price'>原价：￥1800.00</text>
+      </view>
+      <view class='pro-name'>
+        <view class='pro-shao'>
+          <text class='pro-min'>独家定制【觅春】明前西湖龙井礼盒</text>
+          <text class='pro-hui'>明前头采 西湖龙井核心产区 雀舌级</text>
+          <text class='pro-you'>现在预定可享受优惠！</text>
+        </view>
+      </view>
+    </view>
+    <!-- 商品介绍图 -->
+    <view class='proImage-box'>
+      <block>
+        <image src='../../img/timg.jpg'></image>
+      </block>
+    </view>
+  </view>
+</view>
+
+<!-- 加入购物车 -->
+
+<view class='addShopp-box'>
+  <view class='add-shopp'>
+    <view class='add-left'>
+      <view class='shopping'>
+        <image src='../../img/shopping.png'></image>
+        <text class='shop-names'>商城</text>
+      </view>
+      <view class='shop-cart'>
+        <image src='../../img/shoppCart.png'></image>
+        <text class='shop-names'>购物车</text>
+      </view>
+    </view>
+    <view class='add-right'>
+      <view class='add-but'>
+        <text>加入购物车</text>
+      </view>
+      <view class='predetermine'>
+        <text>立即预定</text>
+      </view>
+    </view>
+  </view>
+</view>

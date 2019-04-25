@@ -1,0 +1,137 @@
+<!-- 轮播图 -->
+<view class="wrap">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{duration}}" current="{{swiperCurrent}}" bindchange="swiperChange" class="swiper">
+      <block wx:for="{{indeximage}}" wx:key="imgUrls">  
+          <swiper-item>  
+                <image src="{{item}}" class="slide-image" width="100%" height="150" ></image>  
+          </swiper-item>  
+      </block>  
+    </swiper>  
+   <!--重置小圆点的样式  -->
+    <view class="dots">  
+        <block wx:for="{{indeximage}}" wx:key="imgUrls">  
+            <view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>  
+        </block>  
+    </view>  
+</view>
+
+<!-- 商品详情 -->
+<view class='big-box'>
+  <view class='pro-box'>
+    <view class='commodity-box'>
+      <view class='free-lis'>
+        <view class='freeTit-box'>
+          <view class='free-tit'>
+            <image src='../../img/free.png'></image>
+            <text>放生选择</text>
+          </view>
+          
+        </view>
+         <view class='proList-box'>
+            <scroll-view scroll-x="true"  class='pro-list'>
+              <view class='pro-free'>
+                <image src='../../img/1.jpg' class='anmm-img'/>
+                <view class='prolist-jie'>
+                  <text class='prolist-name'>金鱼</text>
+                  <text class='prolist-prcie'>￥20/1条</text>
+                  <view class='add-shop'>
+                    <image class='addshopp-image' src='../../img/addshopp.png'></image>
+                  </view>
+                </view>
+              </view>
+               <view class='pro-free'>
+                <image src='../../img/1.jpg' class='anmm-img'/>
+                <view class='prolist-jie'>
+                  <text class='prolist-name'>金鱼</text>
+                  <text class='prolist-prcie'>￥20/1条</text>
+                  <view class='add-shop'>
+                    <image class='addshopp-image' src='../../img/addshopp.png'></image>
+                  </view>
+                </view>
+              </view>
+               <view class='pro-free'>
+                <image src='../../img/1.jpg' class='anmm-img'/>
+                <view class='prolist-jie'>
+                  <text class='prolist-name'>金鱼</text>
+                  <text class='prolist-prcie'>￥20/1条</text>
+                  <view class='add-shop'>
+                    <image class='addshopp-image' src='../../img/addshopp.png'></image>
+                  </view>
+                </view>
+              </view>
+               <view class='pro-free'>
+                <image src='../../img/1.jpg' class='anmm-img'/>
+                <view class='prolist-jie'>
+                  <text class='prolist-name'>金鱼</text>
+                  <text class='prolist-prcie'>￥20/1条</text>
+                  <view class='add-shop'>
+                    <image class='addshopp-image' src='../../img/addshopp.png'></image>
+                  </view>
+                </view>
+              </view>
+               <view class='pro-free'>
+                <image src='../../img/1.jpg' class='anmm-img'/>
+                <view class='prolist-jie'>
+                  <text class='prolist-name'>金鱼</text>
+                  <text class='prolist-prcie'>￥20/1条</text>
+                  <view class='add-shop'>
+                    <image class='addshopp-image' src='../../img/addshopp.png'></image>
+                  </view>
+                </view>
+              </view>
+               <view class='pro-free'>
+                <image src='../../img/1.jpg' class='anmm-img'/>
+                <view class='prolist-jie'>
+                  <text class='prolist-name'>金鱼</text>
+                  <text class='prolist-prcie'>￥20/1条</text>
+                  <view class='add-shop'>
+                    <image class='addshopp-image' src='../../img/addshopp.png'></image>
+                  </view>
+                </view>
+              </view>
+            </scroll-view>
+          </view>
+      </view>
+    </view>
+
+
+
+
+
+    <!-- 商品介绍图 -->
+    <view class='proImage-box'>
+      <view class='proImage-tit'>
+        <image src='../../img/shao.png'></image>
+        <text>活动介绍</text>
+      </view>
+      <block>
+        <image src='../../img/timg.jpg'></image>
+      </block>
+    </view>
+  </view>
+</view>
+
+<!-- 加入购物车 -->
+
+<view class='addShopp-box'>
+  <view class='add-shopp'>
+    <view class='add-left'>
+      <view class='shopping'>
+        <image src='../../img/home.png'></image>
+        <text class='shop-names'>首页</text>
+      </view>
+      <view class='shop-cart'>
+        <image src='../../img/shopping.png'></image>
+        <text class='shop-names'>商城</text>
+      </view>
+    </view>
+    <view class='add-right'>
+      <view class='add-but'>
+        <text>购物车</text>
+      </view>
+      <view class='predetermine'>
+        <text>立即参与</text>
+      </view>
+    </view>
+  </view>
+</view>

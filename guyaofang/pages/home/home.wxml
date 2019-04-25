@@ -1,0 +1,36 @@
+<!-- 背景 -->
+<view class='my-user'>
+  <view class='my-bg'>
+    <view class='user-b'>
+      <image src='../../img/wodebj.png'></image>
+    </view>
+  </view>
+</view>
+
+<!-- 个人信息 -->
+<view class='userinfo-site'>
+  <view class='my-home'>
+    <view class='my-ding'>
+      <view class='user-box'>
+        <image src='../../img/orderForm.png'></image>
+        <text>我的订单</text>
+      </view>
+    </view>
+  </view>
+   <view class='my-home'>
+    <view class='my-ding'>
+      <view class='user-box'>
+        <image src='../../img/myPlay.png'></image>
+        <text>我的活动</text>
+      </view>
+    </view>
+  </view>
+   <view class='my-home'>
+    <view class='my-ding'>
+      <view class='user-box'>
+        <image src='../../img/site.png'></image>
+        <text>我的地址</text>
+      </view>
+    </view>
+  </view>
+</view>

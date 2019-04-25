@@ -1,0 +1,21 @@
+<view class='big-box'>
+  <view class='image-box'>
+    <image src='../../img/1.jpg'></image>
+  </view>
+  <view class='add-bot'>
+    <view class='add-footer'>
+      <view class='add-left'>
+        <image src='../../img/iphone.png' ></image>
+        <text>1391141319</text>
+      </view>
+      <view class='add-con'>
+        <text>剩余人数: 20人</text>
+      </view>
+      <view class='add-right'>
+        <button>立即参与</button>
+      </view>
+
+    </view>
+  </view>
+
+</view>
