@@ -1,6 +1,6 @@
   <view class='site_Box'>
     <view class='Site'>
-      <view class="my_Site" wx:for="{{SiteList}}" wx:key="index">
+      <view class="my_Site" wx:for="{{SiteList}}" wx:key="index" data-index='{{index}}' style="right:{{item.right}}rpx" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd">
 
 
       <!-- 头像 -->
@@ -28,6 +28,7 @@
           <image src='../../img/bj.png'  bindtap='GoChangeSite' id="{{item.id}}"></image>
 
         </view>
+        <view class="remove" bindtap="delItem">删除 </view>
       </view>
 
       

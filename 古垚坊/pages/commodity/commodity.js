@@ -88,6 +88,7 @@ Page({
 
   },
   getCommodity(res){
+    console.log(res)
       wx.setNavigationBarTitle({
         title: res.name
       })

@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    aa:[],
     indeximage: [
       "../../img/timg.jpg",
       "../../img/timg.jpg",
@@ -19,6 +20,7 @@ Page({
     inputShowed: false,
     currentSwiper: 0,
     autoplay: true,
+    listDate:{},
     'Activityclassify': '',
     'ActivityId': ''
   },
@@ -101,5 +103,9 @@ Page({
   },
   getAcitivtyThree(res) {
     console.log(res)
+    this.setData({
+      listDate:res,
+    })
+    console.log(this.data.aa)
   }
 })

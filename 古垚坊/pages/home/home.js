@@ -69,7 +69,12 @@ Page({
       url: '/pages/mySite/mySite'
     })
   },
-
+  goMyActivi() {
+    wx.navigateTo({
+      url: '/pages/myactivity/myactivity'
+    })
+  },
+  
 
   
 })

@@ -31,106 +31,107 @@
           
           <!-- 爱心名单 -->
           <view class='list-per'>
-            <view class='perp-rol-box'>
-            <!-- 皇榜 -->
-                <view class='perp-cal'>
-                  <view class='huang-img'>
-                    <image src='../../img/1.png'></image>
+            <scroll-view class='pro-listY' scroll-y="true">
+              <view class='perp-rol-box'>
+              <!-- 皇榜 -->
+                  <view class='perp-cal'>
+                    <view class='huang-img'>
+                      <image src='../../img/1.png'></image>
+                    </view>
+                    <text class="username">李恒</text>
+                    <text class='userprice'>2000</text>
                   </view>
-                  <text class="username">李恒</text>
-                  <text class='userprice'>2000</text>
-                </view>
-                <view class='perp-cal'>
-                  <view class='huang-img'>
-                    <image src='../../img/2.png'></image>
+                  <view class='perp-cal'>
+                    <view class='huang-img'>
+                      <image src='../../img/2.png'></image>
+                    </view>
+                    <text class="username">李恒</text>
+                    <text class='userprice'>2000</text>
                   </view>
-                  <text class="username">李恒</text>
-                  <text class='userprice'>2000</text>
-                </view>
-                <view class='perp-cal'>
-                  <view class='huang-img'>
-                    <image src='../../img/3.png'></image>
+                  <view class='perp-cal'>
+                    <view class='huang-img'>
+                      <image src='../../img/3.png'></image>
+                    </view>
+                    <text class="username">李恒</text>
+                    <text class='userprice'>2000</text>
                   </view>
-                  <text class="username">李恒</text>
-                  <text class='userprice'>2000</text>
-                </view>
-              <!-- 平民榜 -->
-              <view class='ordinary-list'>
-                 <view class='perp-cal'>
-                  <text class="list-index">4</text>
-                  <text class="username">李恒</text>
-                  <text class='userprice'>2000</text>
-                </view>
-                 <view class='perp-cal'>
-                  <text class="list-index">4</text>
-                  <text class="username">李恒</text>
-                  <text class='userprice'>2000</text>
-                </view>
-                 <view class='perp-cal'>
-                  <text class="list-index">4</text>
-                  <text class="username">李恒</text>
-                  <text class='userprice'>2000</text>
-                </view>
-                 <view class='perp-cal'>
-                  <text class="list-index">4</text>
-                  <text class="username">李恒</text>
-                  <text class='userprice'>2000</text>
-                </view>
-                 <view class='perp-cal'>
-                  <text class="list-index">4</text>
-                  <text class="username">李恒</text>
-                  <text class='userprice'>2000</text>
-                </view>
-                 <view class='perp-cal'>
-                  <text class="list-index">4</text>
-                  <text class="username">李恒</text>
-                  <text class='userprice'>2000</text>
-                </view>
-                 <view class='perp-cal'>
-                  <text class="list-index">4</text>
-                  <text class="username">李恒</text>
-                  <text class='userprice'>2000</text>
-                </view>
-                 <view class='perp-cal'>
-                  <text class="list-index">4</text>
-                  <text class="username">李恒</text>
-                  <text class='userprice'>2000</text>
-                </view>
-                 <view class='perp-cal'>
-                  <text class="list-index">4</text>
-                  <text class="username">李恒</text>
-                  <text class='userprice'>2000</text>
+                <!-- 平民榜 -->
+                <view class='ordinary-list'>
+                  <view class='perp-cal'>
+                    <text class="list-index">4</text>
+                    <text class="username">李恒</text>
+                    <text class='userprice'>2000</text>
+                  </view>
+                  <view class='perp-cal'>
+                    <text class="list-index">4</text>
+                    <text class="username">李恒</text>
+                    <text class='userprice'>2000</text>
+                  </view>
+                  <view class='perp-cal'>
+                    <text class="list-index">4</text>
+                    <text class="username">李恒</text>
+                    <text class='userprice'>2000</text>
+                  </view>
+                  <view class='perp-cal'>
+                    <text class="list-index">4</text>
+                    <text class="username">李恒</text>
+                    <text class='userprice'>2000</text>
+                  </view>
+                  <view class='perp-cal'>
+                    <text class="list-index">4</text>
+                    <text class="username">李恒</text>
+                    <text class='userprice'>2000</text>
+                  </view>
+                  <view class='perp-cal'>
+                    <text class="list-index">4</text>
+                    <text class="username">李恒</text>
+                    <text class='userprice'>2000</text>
+                  </view>
+                  <view class='perp-cal'>
+                    <text class="list-index">4</text>
+                    <text class="username">李恒</text>
+                    <text class='userprice'>2000</text>
+                  </view>
+                  <view class='perp-cal'>
+                    <text class="list-index">4</text>
+                    <text class="username">李恒</text>
+                    <text class='userprice'>2000</text>
+                  </view>
+                  <view class='perp-cal'>
+                    <text class="list-index">4</text>
+                    <text class="username">李恒</text>
+                    <text class='userprice'>2000</text>
+                  </view>
+
+                  <view class='perp-cal'>
+                    <text class="list-index">4</text>
+                    <text class="username">李恒</text>
+                    <text class='userprice'>2000</text>
+                  </view> <view class='perp-cal'>
+                    <text class="list-index">4</text>
+                    <text class="username">李恒</text>
+                    <text class='userprice'>2000</text>
+                  </view>
+                  <view class='perp-cal'>
+                    <text class="list-index">4</text>
+                    <text class="username">李恒</text>
+                    <text class='userprice'>2000</text>
+                  </view>
+                  <view class='perp-cal'>
+                    <text class="list-index">4</text>
+                    <text class="username">李恒</text>
+                    <text class='userprice'>2000</text>
+                  </view>
+                  <view class='perp-cal'>
+                    <text class="list-index">4</text>
+                    <text class="username">李恒</text>
+                    <text class='userprice'>2000</text>
+                  </view>
                 </view>
 
-                 <view class='perp-cal'>
-                  <text class="list-index">4</text>
-                  <text class="username">李恒</text>
-                  <text class='userprice'>2000</text>
-                </view> <view class='perp-cal'>
-                  <text class="list-index">4</text>
-                  <text class="username">李恒</text>
-                  <text class='userprice'>2000</text>
-                </view>
-                 <view class='perp-cal'>
-                  <text class="list-index">4</text>
-                  <text class="username">李恒</text>
-                  <text class='userprice'>2000</text>
-                </view>
-                 <view class='perp-cal'>
-                  <text class="list-index">4</text>
-                  <text class="username">李恒</text>
-                  <text class='userprice'>2000</text>
-                </view>
-                 <view class='perp-cal'>
-                  <text class="list-index">4</text>
-                  <text class="username">李恒</text>
-                  <text class='userprice'>2000</text>
-                </view>
+
               </view>
-
-
-            </view>
-          
+            </scroll-view>
 
           </view>
 

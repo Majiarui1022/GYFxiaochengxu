@@ -1,7 +1,50 @@
-<view style='height:84rpx;background:#fff;border-bottom:1rpx solid #dfdbdc;line-height:84rpx;'>
-  <view class="section__title" style='display:inline-block;text-indent:25rpx;float:left;'>选择地址</view>
-  <picker mode="region" bindchange="bindRegionChange" value="{{detailed}}" custom-item="{{customItem}}"
-name="detailed" style='display:inline-block;width:71%;margin-left:36rpx;height:75rpx;letter-spacing:2rpx;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}' >
-    <view class="picker {{clas}}" >{{detailed}}</view>
-  </picker>
-</view>
+<scroll-view scroll-y="{{isScroll}}" style='height:{{windowHeight}}px'>
+    <block wx:key="item" wx:for="{{data}}">
+    <!-- <view data-index='{{index}}' class="order-item" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd" style="right:{{item.right}}rpx">
+        <view class="content">{{item.content}}</view>
+        <view class="remove" bindtap="delItem">删除 </view>
+    </view> -->
+
+
+     <view class="my_Site" data-index='{{index}}' style="right:{{item.right}}rpx" bindtouchstart="drawStart" bindtouchmove="drawMove" bindtouchend="drawEnd">
+
+
+      <!-- 头像 -->
+        <view class='Header_Img'>
+          <image src='../../img/timg.jpg'></image>
+        </view>
+      <!-- 个人信息 -->
+        <view class='userInfo'>
+          <view>
+            <text class='userName'>aa</text>
+            <text class='userIphone'>bb</text>
+          </view>
+          <!-- 地址 -->
+          <view class='siteM'>
+            <text class='active'>默认</text>
+            <text class='site_user'>
+              <text>cc</text>
+              <text>dd</text>
+            </text>
+          </view>
+        </view>
+
+        <!-- 编辑 -->
+        <view class='Bj_Site'>
+          <image src='../../img/bj.png'></image>
+        </view>
+
+      
+    
+    
+    
+    <view class="remove" bindtap="delItem">删除 </view>
+    
+    </view>
+
+    </block>
+</scroll-view>
+
+
+
+

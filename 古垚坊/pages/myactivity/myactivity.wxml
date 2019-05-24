@@ -1,0 +1,28 @@
+<view class="myActivity">
+  <view class='Activity_list'>
+
+
+    <view class='activity' wx:for="{{ActivityList}}">
+      <view class='image_box'>
+        <image src="{{item.goods.front_image}}"></image>
+      </view>
+
+      <view class='activ_pro'>
+        <text class='tea_tit'>名茗雅集</text>
+        <view class='acti_timer'>
+          <text>活动时间：</text>
+          <text>{{item.goods.start_time}}</text>
+        </view>
+        <view class='acti_site'>  
+          <text>活动地址：</text>
+          <text>{{item.goods.activity}}</text>
+        </view>
+      </view>
+      <view class='chakan' wx:if="{{item.goods.classify == 3}}" bindtap='goMany'>查看</view>
+    </view>
+
+
+
+
+    </view>
+</view>

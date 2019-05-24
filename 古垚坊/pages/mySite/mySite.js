@@ -5,11 +5,69 @@ Page({
    * 页面的初始数据
    */
   data: {
-    SiteList:[]
+    SiteList: [],
+    delBtnWidth: 160,
   },
 
 
- 
+  drawStart: function (e) {
+    // console.log("drawStart");  
+    var touch = e.touches[0]
+
+    for (var index in this.data.SiteList) {
+      var item = this.data.SiteList[index]
+      item.right = 0
+    }
+    this.setData({
+      SiteList: this.data.SiteList,
+      startX: touch.clientX,
+    })
+
+  },
+
+
+  drawMove: function (e) {
+    var touch = e.touches[0]
+    var item = this.data.SiteList[e.currentTarget.dataset.index]
+    var disX = this.data.startX - touch.clientX
+    if (disX >= 20) {
+      if (disX > this.data.delBtnWidth) {
+        disX = this.data.delBtnWidth
+      }
+      item.right = disX
+      this.setData({
+        SiteList: this.data.SiteList
+      })
+      console.log(item)
+      console.log(item.right)
+      console.log(this.data.SiteList)
+    } else {
+      item.right = 0
+      this.setData({
+        SiteList: this.data.SiteList
+      })
+    }
+  },
+
+
+  drawEnd: function (e) {
+    var item = this.data.SiteList[e.currentTarget.dataset.index]
+    if (item.right >= this.data.delBtnWidth / 2) {
+      item.right = this.data.delBtnWidth
+      this.setData({
+        SiteList: this.data.SiteList,
+      })
+    } else {
+      item.right = 0
+      this.setData({
+        SiteList: this.data.SiteList,
+      })
+    }
+  },
+
+  delItem: function (e) {
+    console.log('删除')
+  },
 
   /**
    * 生命周期函数--监听页面加载

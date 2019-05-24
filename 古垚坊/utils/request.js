@@ -49,6 +49,50 @@ function getData(url, doSuccess, doFail) {
   })
 }
 
+//delete请求
+function getDeleteData(url, doSuccess, doFail) {
+  console.log('token--------------------------', wx.getStorageSync('token').token)
+  wx.request({
+    url: host + url,
+    header: {
+      "content-type": "application/json;charset=UTF-8",
+      'Authorization': 'JWT ' + wx.getStorageSync('token').token
+    },
+    method: 'delete',
+    success: function (res) {
+      doSuccess(res.data);
+    },
+    fail: function () {
+      doFail();
+    },
+  })
+}
+
+
+
+//updata请求
+function getUpdataData(url, postData, doSuccess, doFail) {
+  wx.request({
+    //项目的真正接口，通过字符串拼接方式实现
+    url: host + url,
+    header: {
+      "content-type": "application/json;charset=UTF-8",
+      'Authorization': 'JWT ' + wx.getStorageSync('token').token
+    },
+    data: postData,
+    method: 'update',
+    success: function (res) {
+      //参数值为res.data,直接将返回的数据传入
+      doSuccess(res.data);
+    },
+    fail: function () {
+      doFail();
+    },
+  })
+}
+
+
+
 /**
  * PUT请求，
  * URL：接口
@@ -86,3 +130,9 @@ function getPutData(url, postData, doSuccess, doFail) {
 module.exports.request = request;
 module.exports.getData = getData;
 module.exports.getPutData = getPutData;
+
+
+module.exports.getUpdataData = getUpdataData;
+
+module.exports.getDeleteData = getDeleteData;
+

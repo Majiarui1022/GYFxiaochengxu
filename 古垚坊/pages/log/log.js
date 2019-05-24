@@ -67,7 +67,6 @@ Page({
       'projectIcon':res
     })
     if(res.length>0){
-
       call.getData('/good/wx/good?priority=&category=' + res[0].id, this.getProjectList, this.fail);  
     }
   },

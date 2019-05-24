@@ -1,24 +1,82 @@
-var call = require("../../utils/city.js")
 Page({
   data: {
-    region: [],
-    detailed: '请选择',
-    customItem: [],
-    clas: 'ccc',
+    delBtnWidth: 160,
+    data: [{ content: "1", right: 0 }, { content: "2", right: 0 }, { content: "3", right: 0 }, { content: "4", right: 0 }, { content: "5", right: 0 }, { content: "6", right: 0 }, { content: "7", right: 0 }, { content: "8", right: 0 }, { content: "9", right: 0 }, { content: "10", right: 0 }, { content: "11", right: 0 }],
+    isScroll: true,
+    windowHeight: 0,
   },
-  bindRegionChange: function (e) {
-    var that = this
-    //为了让选择框有个默认值，    
-    that.setData({
-    clas: ''
-  })　　　//下拉框所选择的值
-console.log('picker发送选择改变，携带值为', e.detail.value)
 
-this.setData({
-  //拼的字符串传后台
-  detailed: e.detail.value[0] + "," + e.detail.value[1] + "," + e.detail.value[2],
-  //下拉框选中的值
-  region: e.detail.value
-})
+
+
+
+
+  onLoad: function (options) {
+    var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          windowHeight: res.windowHeight
+        });
+      }
+    });
   },
+
+
+
+  drawStart: function (e) {
+    // console.log("drawStart");  
+    var touch = e.touches[0]
+
+    for (var index in this.data.data) {
+      var item = this.data.data[index]
+      item.right = 0
+    }
+    this.setData({
+      data: this.data.data,
+      startX: touch.clientX,
+    })
+
+  },
+  drawMove: function (e) {
+    var touch = e.touches[0]
+    var item = this.data.data[e.currentTarget.dataset.index]
+    var disX = this.data.startX - touch.clientX
+
+    if (disX >= 20) {
+      if (disX > this.data.delBtnWidth) {
+        disX = this.data.delBtnWidth
+      }
+      item.right = disX
+      this.setData({
+        isScroll: false,
+        data: this.data.data
+      })
+    } else {
+      item.right = 0
+      this.setData({
+        isScroll: true,
+        data: this.data.data
+      })
+    }
+  },
+  drawEnd: function (e) {
+    var item = this.data.data[e.currentTarget.dataset.index]
+    if (item.right >= this.data.delBtnWidth / 2) {
+      item.right = this.data.delBtnWidth
+      this.setData({
+        isScroll: true,
+        data: this.data.data,
+      })
+    } else {
+      item.right = 0
+      this.setData({
+        isScroll: true,
+        data: this.data.data,
+      })
+    }
+  },
+
+  delItem: function (e) {
+      console.log('删除')
+  }
 })

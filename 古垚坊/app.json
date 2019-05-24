@@ -13,7 +13,9 @@
     "pages/prodetails/prodetails",
     "pages/activitythree/activitythree",
     "pages/allshopping/allshopping",
-    "pages/mySite/mySite"
+    "pages/mySite/mySite",
+    "pages/myactivity/myactivity",
+    "pages/myorder/myorder"
   ],
   "window": {
     "backgroundTextStyle": "light",

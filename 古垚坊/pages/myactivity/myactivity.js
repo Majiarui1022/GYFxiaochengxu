@@ -6,7 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    front_image: []
+      ActivityList:[],     //我的活动列表
   },
 
 
@@ -22,16 +22,25 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    call.getData('/good/wx/activity/', this.getActivity, this.fail);
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    call.getData('/order/wx/activity/', this.getMyList, this.fail);
   },
 
+
+  //我的活动列表
+  getMyList(data){
+      console.log(data)
+      this.setData({
+        ActivityList:data.results
+      })
+    console.log(this.data.ActivityList)
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */
@@ -66,30 +75,10 @@ Page({
   onShareAppMessage: function () {
 
   },
-  getActivity(res){
-    console.log(res)
-    this.setData({
-      front_image: res
-    })
-  },
 
-  goAcitivty(event){
-    console.log(event)
-    switch (event.currentTarget.dataset.classify){
-      case 1:
-        this.goAcitivtyOne(event.currentTarget.id, '1')
-        break;
-      case 2:
-        this.goAcitivtyTwo(event.currentTarget.id, '2')
-        break;
-      case 3:
-        this.goAcitivtyThree(event.currentTarget.id, '3')
-        break;
-    }
-  },
-  goAcitivtyThree(id, classify){
+  goMany() {
     wx.navigateTo({
-      url: '/pages/freeactice/freeactice?classify=' + classify +'&id='+id
+      url: '/pages/animals/animals'
     })
-  }
+  },
 })

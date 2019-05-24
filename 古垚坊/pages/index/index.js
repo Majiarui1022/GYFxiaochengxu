@@ -153,6 +153,9 @@ Page({
   },
   // 商品加入购物车
   addshopCart(event){
+    wx.showLoading({
+      title: '正在加载中...',
+    })
     var postData ={
       "nums": '1',
       "goods": event.currentTarget.id
@@ -161,6 +164,7 @@ Page({
   },
   //加入成功回调
   setaddshopCart(data){
+    wx.hideLoading();
     wx.showToast({
       title: '添加成功',
       icon: 'succes',

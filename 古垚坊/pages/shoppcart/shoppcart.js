@@ -11,6 +11,8 @@ Page({
     edit_show: "none",
     edit_number: "",
     edit_index: "",
+    removeID:[],     //删除购物车列表数据iD
+    removeIndex:[],    //删除列表数据下标
     site:'',
     jasSote:false,     //是否有地址
     // list: [],               // 购物车列表
@@ -34,15 +36,17 @@ Page({
     })
     // 价格方法
     this.count_price();
+
+    call.getData('/order/cart/', this.getProjectCart, this.fail);
+
+    //请求地址
+    call.getData('/user/wx/default_address/', this.getUserSiste, this.fail);
   },
   /**
   * 生命周期函数--监听页面初次渲染完成
   */
   onReady: function () {
-    call.getData('/order/cart/', this.getProjectCart, this.fail);
-
-      //请求地址
-    call.getData('/user/wx/default_address/', this.getUserSiste, this.fail);
+   
     
   },
   getProjectCart(res){
@@ -317,28 +321,91 @@ Page({
       }
     })
   },
-  // 提交订单
+  // 提交订单   或者删除订单
   btn_submit_order: function () {
-    var that = this;
-    console.log(that.data.totalPrice);
-
-    // 调起支付
-    // wx.requestPayment(
-    //   {
-    //     'timeStamp': '',
-    //     'nonceStr': '',
-    //     'package': '',
-    //     'signType': 'MD5',
-    //     'paySign': '',
-    //     'success': function (res) { },
-    //     'fail': function (res) { },
-    //     'complete': function (res) { }
-    //   })
-    wx.showModal({
-      title: '提示',
-      content: '合计金额' + that.data.totalPrice + "暂未开发",
+    // 显示加载图标  
+    wx.showLoading({
+      title: '正在加载中...',
     })
+    var that = this
+      //全选删除
+    if (that.data.edit_show === "none" && that.data.selectAllStatus == true){
+
+      call.getDeleteData('/order/cartchoice/1/', that.deleteList, that.fail);
+
+        return false;
+    } else if (that.data.edit_show === "none" && that.data.selectAllStatus == false){
+        //不是全选删除
+      var postData = {choice:[]}
+      console.log(postData.choice)
+      for (var i in that.data.list) {
+        if (that.data.list[i].choice == true){
+          console.log(that.data.list[i].id)
+          that.data.removeID.push(that.data.list[i].id)
+          that.data.removeIndex.push(i)
+          postData.choice.push(that.data.list[i].id)
+        }
+      }
+      console.log(postData)
+      call.getPutData('/order/cartchoice/1/', postData, that.deleteListpro, that.fail);
+      return false
+
+    }else{
+
+      var that = this;
+      console.log(that.data.totalPrice);
+
+      // 调起支付
+      // wx.requestPayment(
+      //   {
+      //     'timeStamp': '',
+      //     'nonceStr': '',
+      //     'package': '',
+      //     'signType': 'MD5',
+      //     'paySign': '',
+      //     'success': function (res) { },
+      //     'fail': function (res) { },
+      //     'complete': function (res) { }
+      //   })
+      wx.hideLoading();
+      wx.showModal({
+        title: '提示',
+        content: '合计金额' + that.data.totalPrice + "暂未开发",
+      })
+
+
+
+    }
   },
+
+
+
+  //购物车列表全部删除
+  deleteList(data){
+    this.setData({
+      list:[],
+      selectAllStatus:false,
+      totalPrice:0
+    })
+    wx.hideLoading();
+      console.log(data)
+  },
+
+
+  //购物车列表部分删除
+  deleteListpro(data){
+    console.log(data)
+    for (var j in this.data.removeIndex){
+      this.data.list.splice(this.data.removeIndex[j],1)
+    }
+    this.count_price();
+    this.setData({
+      removeID:[],
+      removeIndex:[]
+    })
+    wx.hideLoading();
+  },
+
   // 收藏
   btn_collert: function () {
     wx.showToast({
@@ -391,7 +458,7 @@ Page({
         selectAllStatus: that.data.selectAllStatus
       })
       this.count_price()
-    }
+    },
 
 
   // 下拉刷新
@@ -473,5 +540,17 @@ Page({
   //   })
 
   // },
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+    console.log(151321)
+    this.setData({
+      edit_show: "block",
+      edit_name: "提交订单",
+      show_edit: "block"
+    })
+    bool = true;
+  },
 
 })

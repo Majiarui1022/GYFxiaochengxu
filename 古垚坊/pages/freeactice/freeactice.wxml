@@ -29,7 +29,22 @@
         </view>
          <view class='proList-box'>
             <scroll-view scroll-x="true"  class='pro-list'>
-              <view class='pro-free'>
+
+              <view class='pro-free' wx:for="{{listDate.animals}}">
+                <image src="{{item.image}}" class='anmm-img'/>
+                <view class='prolist-jie'>
+                  <text class='prolist-name'>{{item.name}}</text>
+                  <text class='prolist-prcie'>￥{{item.price}}/1条</text>
+                  <view class='add-shop'>
+                    <image class='addshopp-image' src='../../img/addshopp.png'></image>
+                  </view>
+                </view>
+              </view>
+
+
+
+
+               <!-- <view class='pro-free'>
                 <image src='../../img/1.jpg' class='anmm-img'/>
                 <view class='prolist-jie'>
                   <text class='prolist-name'>金鱼</text>
@@ -78,17 +93,7 @@
                     <image class='addshopp-image' src='../../img/addshopp.png'></image>
                   </view>
                 </view>
-              </view>
-               <view class='pro-free'>
-                <image src='../../img/1.jpg' class='anmm-img'/>
-                <view class='prolist-jie'>
-                  <text class='prolist-name'>金鱼</text>
-                  <text class='prolist-prcie'>￥20/1条</text>
-                  <view class='add-shop'>
-                    <image class='addshopp-image' src='../../img/addshopp.png'></image>
-                  </view>
-                </view>
-              </view>
+              </view> -->
             </scroll-view>
           </view>
       </view>
