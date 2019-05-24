@@ -1,0 +1,5 @@
+<view class="actovity-box">
+  <view class="image" wx:for="{{front_image}}" wx:key="item.id" bindtap='goAcitivty' id="{{item.id}}" data-classify="{{item.classify}}">
+    <image src="{{item.front_image}}"></image>
+  </view>
+</view>

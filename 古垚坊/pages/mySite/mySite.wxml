@@ -1,0 +1,39 @@
+  <view class='site_Box'>
+    <view class='Site'>
+      <view class="my_Site" wx:for="{{SiteList}}" wx:key="index">
+
+
+      <!-- 头像 -->
+        <view class='Header_Img'>
+          <image src='../../img/timg.jpg'></image>
+        </view>
+      <!-- 个人信息 -->
+        <view class='userInfo'>
+          <view>
+            <text class='userName'>{{item.name}}</text>
+            <text class='userIphone'>{{item.mobile}}</text>
+          </view>
+          <!-- 地址 -->
+          <view class='siteM'>
+            <text class='active' wx:if="{{item.is_default}}">默认</text>
+            <text class='site_user'>
+              <text>{{item.area}}  </text>
+              <text>{{item.street}}</text>
+            </text>
+          </view>
+        </view>
+
+        <!-- 编辑 -->
+        <view class='Bj_Site'>
+          <image src='../../img/bj.png'  bindtap='GoChangeSite' id="{{item.id}}"></image>
+
+        </view>
+      </view>
+
+      
+    </view>
+     <view class='addSite' bindtap='goAddSite'>
+        <image src='../../img/addSite.png'></image>
+        <text>添加地址</text>
+       </view>
+  </view>

@@ -1,0 +1,48 @@
+<view class="site-box">
+  <!-- 编辑地址 -->
+  <view class="site-slite">
+    <view class="my-news">
+      <view class="onec">
+        <text class="slite-tit">联系人</text>
+        <input type='text' placeholder-class='pholor' placeholder='名字' value='{{userSite.name}}' bindinput="bindName"></input>
+      </view>
+      <view class="onec">
+        <text class="slite-tit">手机号码</text>
+        <input type='number' placeholder-class='pholor' placeholder='11位手机号' value='{{userSite.mobile}}' bindinput="bindPhone"></input>
+      </view>
+      <!-- <view class="onec">
+        <text class="slite-tit">选择地区</text>
+        <input type='text' placeholder-class='pholor' placeholder='地区信息' value='{{userSite.area}}' bindinput="bindCity"></input>
+      </view> -->
+      <view style='height:84rpx;background:#fff;border-bottom:1px solid #D9D9D9;line-height:84rpx;'>
+        <view class="section__title" style='display:inline-block;line-height:85rpx;color:rgba(0,0,0,1);font-size:33rpx;float:left;'>选择地址</view>
+        <picker mode="region" bindchange="bindRegionChange" value="{{detailed}}" custom-item="{{customItem}}"
+      name="detailed" style='display:inline-block;font-size:33rpx;color:#C7C7CC;width:71%;margin-left:36rpx;height:75rpx;letter-spacing:2rpx;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}' >
+          <view class="picker {{clas}}" >{{detailed}}</view>
+        </picker>
+      </view>
+
+
+      <view class="onec">
+        <text class="slite-tit">详细地址</text>
+        <input type='text' placeholder-class='pholor' placeholder='详细地址' value='{{userSite.street}}' bindinput="bindSite"></input>
+      </view>
+      <view class="onec">
+        <text class="slite-tit">邮政编码</text>
+        <input type='nummber' placeholder-class='pholor' placeholder='邮政编码' value='{{userSite.postcode}}' bindinput="bindpostCode"></input>
+      </view>
+    </view>
+
+
+
+    <view class='moren'>
+      <view class='cal'>
+      <text>设置为默认地址</text>
+        <view class="body-view">
+          <switch checked='{{userSite.is_default}}' bindchange="switch1Change" />
+        </view>
+      </view>
+    </view>
+    <view class='changeSiteOK' bindtap='SendSiteUse'>完成</view>
+  </view>
+</view>
